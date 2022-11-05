@@ -27,7 +27,9 @@ app.use("/api/user", userRoutes);
 
 //connect to DB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(
+    "mongodb+srv://admin:admin123@mernstack.yzzbe4o.mongodb.net/?retryWrites=true&w=majority"
+  )
   .then(() => {
     console.log("connected to MongoDB");
     //listen for requests on the port
