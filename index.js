@@ -18,8 +18,8 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.use("/api/workouts", workoutRoutes);
-app.use("/api/user", userRoutes);
+app.use("https://mernstack-react.herokuapp.com/api/workouts", workoutRoutes);
+app.use("https://mernstack-react.herokuapp.com/api/user", userRoutes);
 
 //app.get("/", (req, res) => {
 //  res.json({ msg: "Welcome!!" });
