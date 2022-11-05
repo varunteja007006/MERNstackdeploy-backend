@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 //express app
 const app = express();
 
-//middleware
+//middlewares
 app.use(express.json());
 
 //Global middleware
