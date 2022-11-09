@@ -8,24 +8,21 @@ const userRoutes = require("./routes/user");
 const mongoose = require("mongoose");
 //express app
 const app = express();
-
 //middlewares
 app.use(express.json());
-
 //Global middleware
 app.use((req, res, next) => {
   //console.log(req.path, req.method);
   next();
 });
+//To avoid CORS error
 app.use(cors())
 //routes
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
-
 //app.get("/", (req, res) => {
 //  res.json({ msg: "Welcome!!" });
 //});
-
 //connect to DB
 mongoose
   .connect(process.env.MONGO_URI)
